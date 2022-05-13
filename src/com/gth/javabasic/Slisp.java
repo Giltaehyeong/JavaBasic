@@ -3,7 +3,20 @@ package com.gth.javabasic;
 public class Slisp {
 
 	public static void main(String[] args) {
-		System.out.println("프로그램 실습 test 메세지 입니다.");
-		System.out.println("깃 업로드 확인.");
+		int year = 0;
+		int age = 14;
+		
+		System.out.println(year);
+		System.out.println(age);
+		
+		year = age + 2000; // 변수 age의 값에 2000을 더해서 변수 year에 저장
+		
+		System.out.println(year);
+		
+		age = age + 1; // 변수 age에 저장된 값을 1증가시킨다.
+		
+		System.out.println(age);
 	}
+
 }
+
