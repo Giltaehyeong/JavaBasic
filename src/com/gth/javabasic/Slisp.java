@@ -2,23 +2,13 @@ package com.gth.javabasic;
 
 public class Slisp {
 	public static void main(String[] args) {
-		int i = 10;
-		byte b = (byte)i;
-		System.out.printf("[int -> byte] i = %d -> b=%d%n", i, b);
+		float f = 9.1234567f;
+		double d = 9.1234567;
+		double d2 = (double)f;
 		
-		i = 300;
-		b = (byte)i;
-		System.out.printf("[int -> byte] i = %d -> b=%d%n", i, b); //b 값손실 발생.
-		
-		b = 10;
-		i = (int)b;
-		System.out.printf("[byte -> int] b=%d -> i=%d%n", b, i);
-		
-		b = -2;
-		i = (int)b;
-		System.out.printf("[byte -> int] b=%d -> i=%d%n", b, i);
-		
-		System.out.println("i="+Integer.toBinaryString(i));
+		System.out.printf("f = %20.18f%n", f);
+		System.out.printf("d = %20.18f%n", d);
+		System.out.printf("d2 = %20.18f%n", d2);
 	}
 }
 
