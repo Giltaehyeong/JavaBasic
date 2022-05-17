@@ -4,13 +4,11 @@ import java.util.Scanner;
 
 public class Slisp {
 	public static void main(String[] args) {
-		char ch = 'A'; // char ch = 65;
-		int code = (int)ch; // ch에 저장된 값을 int타입으로 변환하여 저장한다.
-		
-		System.out.printf("%c=%d(%#X) %n", ch, code, code);
-		
-		char hch = '가'; // char hch = 0xAC00;
-		System.out.printf("%c=%d(%#X) %n", hch, (int)hch, (int)hch);
+		System.out.println('\''); //'''처럼 사용할 수 없다.
+		System.out.println("abc\t123\b456"); //123456 이클립스 콘솔에러. cmd에서 정상출력 확인.
+		System.out.println("\n"); // 개행(New line)문자 출력하고 개행
+		System.out.println("\"Hello\""); //큰 타옴표를 출력하려면 이렇게 한다.
+		System.out.println("c:\\");
 	}
 }
 
