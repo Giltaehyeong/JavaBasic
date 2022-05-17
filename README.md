@@ -3,7 +3,7 @@
 
 ~~Chapter.01 자바를 시작하기 전에~~
 
-~~Chapter.02 변수(Variable)~~
+Chapter.02 변수(Variable)
 
 Chapter.03 연산자(Operator)
 
