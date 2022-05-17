@@ -4,11 +4,19 @@ import java.util.Scanner;
 
 public class Slisp {
 	public static void main(String[] args) {
-		System.out.println('\''); //'''처럼 사용할 수 없다.
-		System.out.println("abc\t123\b456"); //123456 이클립스 콘솔에러. cmd에서 정상출력 확인.
-		System.out.println("\n"); // 개행(New line)문자 출력하고 개행
-		System.out.println("\"Hello\""); //큰 타옴표를 출력하려면 이렇게 한다.
-		System.out.println("c:\\");
+		short sMin = -32768;
+		short sMax = 32767;
+		char cMin = 0;
+		char cMax = 65535;
+		
+		System.out.println("sMin = " + sMin);
+		System.out.println("sMin - 1 = " + (short)(sMin-1));
+		System.out.println("sMax = " + sMax);
+		System.out.println("sMax + 1 = " + (short)(sMax+1));
+		System.out.println("cMin = " + (int)cMin);
+		System.out.println("cMin - 1 = " + (int)--cMin);
+		System.out.println("cMax = " + (int)cMax);
+		System.out.println("cMax + 1 = " + (int)++cMax);
 	}
 }
 
