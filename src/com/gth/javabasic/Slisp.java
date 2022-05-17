@@ -2,29 +2,26 @@ package com.gth.javabasic;
 
 public class Slisp {
 	public static void main(String[] args) {
-		byte b = 1;
-		short s = 2;
-		char c = 'A';
 		
-		int finger = 10;
-		long big = 100_000_000_000L; // long big  = 100000000000; 
-		long hex = 0xFFFF_FFFF_FFFF_FFFFL; //L은 접두사
+		String url = "www.codechobo.com";
 		
-		int octNum = 010; // 8진수 10, 10진수로는 8
-		int hexNum = 0x10; // 16진수 10, 10진수로는 16
-		int binNum = 0b10; // 2진수 10, 10진수로는 2
+		float f1 = .10f; //0.10, 1.0e-1
+		float f2 =1e1f; // 10.0, 1.0e1, 1.0e+1
+		float f3 = 3.14e3f;
+		double d = 1.23456789;
 		
-		System.out.printf("b=%d%n", b);
-		System.out.printf("s=%d%n", s);
-		System.out.printf("c=%c, %d %n", c , (int)c);
-		System.out.printf("finger=[%5d]%n", finger); //공간 5칸 확보 후 뒤에서부터 출력
-		System.out.printf("finger=[%-5d]%n", finger);// 공간 5칸 확보 후 앞에서부터 출력 
-		System.out.printf("finger=[%05d]%n", finger); //공간 5칸 확보후 남는 공간엔 0을 나머지공간에 값 출력
-		System.out.printf("big=%d%n", big);
-		System.out.printf("hex=%#x%n", hex); //#은 접두사 : 0x를 출력해줌.
-		System.out.printf("octNum=%o, %d%n", octNum, octNum);
-		System.out.printf("hexNum=%x, %d%n", hexNum, hexNum);
-		System.out.printf("binNum=%s, %d%n", Integer.toBinaryString(binNum), binNum);
+		System.out.printf("f1=%f, %e, %g%n", f1, f1, f1);
+		System.out.printf("f2=%f, %e, %g%n", f2, f2, f2);
+		System.out.printf("f3=%f, %e, %g%n", f3, f3, f3);
+		
+		System.out.printf("d=%f%n", d); //마지막 자리 반올림됨.
+		System.out.printf("d=%14.10f%n", d); // 전체자리.소수점아래자리f
+		
+		System.out.printf("[12345678901234567890]%n");
+		System.out.printf("[%s]%n", url); // 문자열의 길이만큼 출력공간을 확보
+		System.out.printf("[%20s]%n", url); // 최소 20글자 출력공간 확보.(우측정렬)
+		System.out.printf("[%-20s]%n", url); // 최소 20글자 출력공간 확보.(좌측정렬)
+		System.out.printf("[%.8s]%n", url); // 왼쪽에서 8글자만 출력
 	}
 }
 
