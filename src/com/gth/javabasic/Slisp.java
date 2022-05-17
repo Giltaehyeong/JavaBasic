@@ -4,14 +4,13 @@ import java.util.Scanner;
 
 public class Slisp {
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in); //Scanner 객체를 생성
+		char ch = 'A'; // char ch = 65;
+		int code = (int)ch; // ch에 저장된 값을 int타입으로 변환하여 저장한다.
 		
-		System.out.print("두자리 정수를 하나 입력해주세요>");
-		String input = scanner.nextLine(); // 입력받은 내용을 input에 저장
-		int num = Integer.parseInt(input); // 입력받은 내용을 int타입의 값으로 변환
+		System.out.printf("%c=%d(%#X) %n", ch, code, code);
 		
-		System.out.println("입력내용 : "+ input);
-		System.out.printf("num = %d%n", num);
+		char hch = '가'; // char hch = 0xAC00;
+		System.out.printf("%c=%d(%#X) %n", hch, (int)hch, (int)hch);
 	}
 }
 
