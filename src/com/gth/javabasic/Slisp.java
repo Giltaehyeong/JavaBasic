@@ -13,12 +13,16 @@ class Tv{ ; //1. 클래스생성(설계도)
 
 public class Slisp {
 	public static void main(String[] args) {
-		Tv t;  // Tv인스턴스를 참조하기 위한 변수, t를 선언
-		t = new Tv(); // Tv 인스턴스를 생성한다.
-		t.channel = 7; // Tv 인스턴스의 멤버변수 channel의 값을 7로한다.
-		// 3. 객체 사용(제품의 기능을 사용한다.)
-		t.channelDown(); // Tv 인스턴스의 메서드 channelDown을 호출한다.
-		System.out.println("현재 채널은 " + t.channel + "입니다.");
+		Tv t1 = new Tv(); //Tv t1; t1 = new Tv();를 한문장으로 가능
+		Tv t2 = new Tv();
+		System.out.println("현재 채널은 " + t1.channel + "입니다.");
+		System.out.println("현재 채널은 " + t2.channel + "입니다.");
+		
+		t1.channel = 7; //channel의 값을 7으로 한다.
+		System.out.println("t1의 channel값을 7로 변경하였습니다.");
+		
+		System.out.println("t1의 channel 값은 " + t1.channel + "입니다.");
+		System.out.println("t2의 channel 값은 " + t2.channel + "입니다.");
 	}
 }
 
