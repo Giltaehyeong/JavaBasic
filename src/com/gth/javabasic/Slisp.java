@@ -9,7 +9,6 @@ class Tv{ ; //1. 클래스생성(설계도)
 	void power() { power = !power; } // TV를 켜거나 끄는 기능을 하는 메서드
 	void vhannelUp() { ++channel; } // TV의 채널을 높이는 기능을 하는 메서드
 	void channelDown() { --channel; } // TV의 채널을 낮추는 기능을 하는 메서드
-	
 }
 
 public class Slisp {
