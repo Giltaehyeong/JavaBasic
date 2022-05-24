@@ -13,12 +13,13 @@ class Tv{ ; //1. 클래스생성(설계도)
 
 public class Slisp {
 	public static void main(String[] args) {
-		Tv t1 = new Tv(); //Tv t1; t1 = new Tv();를 한문장으로 가능
+		Tv t1 = new Tv(); 
 		Tv t2 = new Tv();
 		System.out.println("현재 채널은 " + t1.channel + "입니다.");
 		System.out.println("현재 채널은 " + t2.channel + "입니다.");
 		
-		t1.channel = 7; //channel의 값을 7으로 한다.
+		t2 = t1; // t1이 저장하고  있는 값(주소)을 t2에 저장한다.
+		t1.channel = 7; // channel 값을 7로 한다.
 		System.out.println("t1의 channel값을 7로 변경하였습니다.");
 		
 		System.out.println("t1의 channel 값은 " + t1.channel + "입니다.");
