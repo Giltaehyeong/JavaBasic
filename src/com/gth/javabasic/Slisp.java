@@ -1,29 +1,37 @@
 package com.gth.javabasic;
 
-class Tv{ ; //1. 클래스생성(설계도)
+public class Slisp {
+	public static void main(String[] args) {
+		Tv[] tvArr = new Tv[3]; // 길이가 3인 Tv객체 배열
+		
+		// Tv객체를 생성해서 Tv 객체 배열의 각 요소에 저장
+		for(int i = 0; i < tvArr.length; i++) {
+			tvArr[i] = new Tv();
+			tvArr[i].channel = i + 10; // tvArr[i]의 메서드를 호출. 채널이 1증가
+		}
+		
+		for(int i = 0; i < tvArr.length; i++) {
+			tvArr[i].channelUp(); // tvArr[i]의 메서드를 호출. 채널이 1증가
+			System.out.printf("tvArr[%d].hannel=%d%n", i, tvArr[i].channel, tvArr[i].channel);
+		}
+	}
+}
+
+class Tv {
 	String color; // 색상
 	boolean power; // 전원상태(on/off)
 	int channel; // 채널
 
-	// 2. 객체 생성(제품의 기능을 생성한다.)
-	void power() { power = !power; } // TV를 켜거나 끄는 기능을 하는 메서드
-	void vhannelUp() { ++channel; } // TV의 채널을 높이는 기능을 하는 메서드
-	void channelDown() { --channel; } // TV의 채널을 낮추는 기능을 하는 메서드
-}
+// 2. 객체 생성(제품의 기능을 생성한다.)
+	void power() {
+		power = !power;
+	} // TV를 켜거나 끄는 기능을 하는 메서드
 
-public class Slisp {
-	public static void main(String[] args) {
-		Tv t1 = new Tv(); 
-		Tv t2 = new Tv();
-		System.out.println("현재 채널은 " + t1.channel + "입니다.");
-		System.out.println("현재 채널은 " + t2.channel + "입니다.");
-		
-		t2 = t1; // t1이 저장하고  있는 값(주소)을 t2에 저장한다.
-		t1.channel = 7; // channel 값을 7로 한다.
-		System.out.println("t1의 channel값을 7로 변경하였습니다.");
-		
-		System.out.println("t1의 channel 값은 " + t1.channel + "입니다.");
-		System.out.println("t2의 channel 값은 " + t2.channel + "입니다.");
-	}
-}
+	void channelUp() {
+		++channel;
+	} // TV의 채널을 높이는 기능을 하는 메서드
 
+	void channelDown() {
+		--channel;
+	} // TV의 채널을 낮추는 기능을 하는 메서드
+}
