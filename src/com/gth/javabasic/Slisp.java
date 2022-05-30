@@ -1,23 +1,48 @@
 package com.gth.javabasic;
 
+import java.util.Iterator;
+
 class Data3 { int x; }
 
 public class Slisp { // 프로그램 실행
 	public static void main(String[] args) {
-		Data3 d = new Data3(); 
-		d.x = 10;
-		System.out.println(d);
+		MyMath3 mm = new MyMath3();
+		// The method add(int, long) is ambiguous for the type MyMath3. 모호 불확실
+		System.out.println("mm.add(3, 3) 결과:"    + mm.add(3, 3));
+		System.out.println("mm.add(3L, 3) 결과: "  + mm.add(3L, 3));
+		System.out.println("mm.add(3, 3L) 결과:"    + mm.add(3, 3L));
+		System.out.println("mm.add(3L, 3L) 결과:"    + mm.add(3L, 3L));
 		
-		Data3 d2 = copy(d);
-		System.out.println(d2);
-		System.out.println("d.x = " + d.x);
-		System.out.println("d2.x =  " + d2.x);
-	} 
+		int[] a = {100, 200, 300};
+		System.out.println("mm.add(a) 결과: " + mm.add(a));
+	}
+}
+
+class MyMath3{
+//	int add(int a, int b) {
+//		System.out.print("int add(int a, int b) - ");
+//		return a+b;
+//	}
+	long add(int a, long b) {
+		System.out.print("long add(int a, long b) - ");
+		return a+b;
+	}
+	long add(long a, int b) {
+		System.out.print("long add(long a, int b) - ");
+		return a+b;
+	}
+	long add(long a, long b) {
+		System.out.print("long add(long a, long b) - ");
+		return a+b;
+	}
 	
-	static Data3 copy(Data3 d) { // 메서드의 반환타입이 참조형이라는 것은 복사한 객체의 주소를 반환한다는 의미로 해석하자.
-		Data3 tmp = new Data3(); // 새로운 객체 tmp를 생성한다.
-		tmp.x = d.x;  // d.x 의 값을 tmp.x 에 복사한다.
-		System.out.println(tmp);
-		return tmp; // 복사한 객체의 주소를 반환한다.
-	} 
+	int add(int[] a) { 				// 배열의 모든 요소의 합을 결과로 돌려준다.
+		System.out.print("int add(int[] a) - ");
+		int result = 0;
+		for(int i = 0; i < a.length; i++) {
+			result += a[i];
+		}
+		return result;
+	}
+	
 }
