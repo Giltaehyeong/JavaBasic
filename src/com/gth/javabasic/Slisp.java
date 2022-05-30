@@ -2,36 +2,38 @@ package com.gth.javabasic;
 
 public class Slisp {
 	public static void main(String[] args) {
-		Tv[] tvArr = new Tv[3]; // 길이가 3인 Tv객체 배열
+		System.out.println("Card.width = " + Card.width);
+		System.out.println("Card.height = " + Card.height);
 		
-		// Tv객체를 생성해서 Tv 객체 배열의 각 요소에 저장
-		for(int i = 0; i < tvArr.length; i++) {
-			tvArr[i] = new Tv();
-			tvArr[i].channel = i + 10; // tvArr[i]의 메서드를 호출. 채널이 1증가
-		}
+		Card c1 = new Card();
+		c1.kind = "Heart";
+		c1.number = 7;
 		
-		for(int i = 0; i < tvArr.length; i++) {
-			tvArr[i].channelUp(); // tvArr[i]의 메서드를 호출. 채널이 1증가
-			System.out.printf("tvArr[%d].hannel=%d%n", i, tvArr[i].channel, tvArr[i].channel);
-		}
+		Card c2 = new Card();
+		c2.kind = "Spade";
+		c2.number = 4;
+		
+		System.out.println("c1은  " + c1.kind + ", " + c1.number
+				+ "이며, 크기는 (" + c1.width + ", " + c1.height + ") ");
+		
+		System.out.println("c2은  " + c2.kind + ", " + c2.number
+				+ "이며, 크기는 (" + c2.width + ", " + c2.height + ") ");
+		
+		System.out.println("c1의 width와 height를 각각 50, 80으로 변경합니다.");
+		Card.width = 50; // cv 클래스 변수는 공유 변수이다. 그래서 표기법을 클래스이름.변수 이름으로 구별한다.
+		Card.height = 80;
+		
+		System.out.println("c1은  " + c1.kind + ", " + c1.number
+				+ "이며, 크기는 (" + c1.width + ", " + c1.height + ") ");
+		
+		System.out.println("c2은  " + c2.kind + ", " + c2.number
+				+ "이며, 크기는 (" + c2.width + ", " + c2.height + ") ");
 	}
 }
 
-class Tv {
-	String color; // 색상
-	boolean power; // 전원상태(on/off)
-	int channel; // 채널
-
-// 2. 객체 생성(제품의 기능을 생성한다.)
-	void power() {
-		power = !power;
-	} // TV를 켜거나 끄는 기능을 하는 메서드
-
-	void channelUp() {
-		++channel;
-	} // TV의 채널을 높이는 기능을 하는 메서드
-
-	void channelDown() {
-		--channel;
-	} // TV의 채널을 낮추는 기능을 하는 메서드
+class Card{
+	String kind;
+	int number;
+	static int width = 100;
+	static int height = 250;
 }
