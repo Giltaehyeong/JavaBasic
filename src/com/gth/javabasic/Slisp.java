@@ -2,38 +2,28 @@ package com.gth.javabasic;
 
 public class Slisp {
 	public static void main(String[] args) {
-		System.out.println("Card.width = " + Card.width);
-		System.out.println("Card.height = " + Card.height);
+		MyMath mm = new MyMath();
+		long result1 = mm.add(5L, 3L);
+		long result2 = mm.subtract(5L, 3L);
+		long result3 = mm.multiply(5L, 3L);
+		double result4 = mm.divide(5L, 3L);
 		
-		Card c1 = new Card();
-		c1.kind = "Heart";
-		c1.number = 7;
-		
-		Card c2 = new Card();
-		c2.kind = "Spade";
-		c2.number = 4;
-		
-		System.out.println("c1은  " + c1.kind + ", " + c1.number
-				+ "이며, 크기는 (" + c1.width + ", " + c1.height + ") ");
-		
-		System.out.println("c2은  " + c2.kind + ", " + c2.number
-				+ "이며, 크기는 (" + c2.width + ", " + c2.height + ") ");
-		
-		System.out.println("c1의 width와 height를 각각 50, 80으로 변경합니다.");
-		Card.width = 50; // cv 클래스 변수는 공유 변수이다. 그래서 표기법을 클래스이름.변수 이름으로 구별한다.
-		Card.height = 80;
-		
-		System.out.println("c1은  " + c1.kind + ", " + c1.number
-				+ "이며, 크기는 (" + c1.width + ", " + c1.height + ") ");
-		
-		System.out.println("c2은  " + c2.kind + ", " + c2.number
-				+ "이며, 크기는 (" + c2.width + ", " + c2.height + ") ");
+		System.out.println("add(5L, 3L) = " + result1);
+		System.out.println("subtract(5L, 3L) = " + result2);
+		System.out.println("multiply(5L, 3L) = " + result3);
+		System.out.println("divide(5L, 3L) = " + result4);
 	}
 }
 
-class Card{
-	String kind;
-	int number;
-	static int width = 100;
-	static int height = 250;
+class MyMath {
+	long add(long a, long b) {
+		long result = a+b;
+		return result;
+//		return a+b; //위의 두줄을 이와 같이 한 줄로 간단히 할 수 있다.
+	}
+	long subtract(long a, long b) { return a-b;}
+	long multiply(long a, long b) {return a*b;}
+	double divide(double a, double b) {
+		return a / b;
+	}
 }
