@@ -1,20 +1,20 @@
 package com.gth.javabasic;
 
-class Data { int x; }
+class Data2 { int x; }
 
 public class Slisp { // 프로그램 실행
 	public static void main(String[] args) { //1. main 메서드 실행 In
-		Data d = new Data(); // 객체 생성
-		d.x = 10; // 객체 참조변수 x변수에 10대입
-		System.out.println("main() : x= " + d.x); //2. println 메서드 실행 In , 3. 콘솔 출력시 out
+		Data2 d2 = new Data2(); // Data2 객체를 생성후 참조변수 d2에 객체 주소값 저장
+		d2.x = 10; // 참조변수 x에 10값 대입
+		System.out.println("main() : x = " + d2.x); //2. println 메서드 In 3. 콘솔창 출력시 out
 		
-		change(d.x); //chagne 메서드 호출, 호출한곳으로 되돌아옴.
-		System.out.println("After change(d.x)"); //8. println 메서드 실행 In , 3. 콘솔 출력시 out
-		System.out.println("main() : x = "+ d.x); //9.  println 메서드 실행 In , 3. 콘솔 출력시 out
-	} // 프로그램 종료
+		change(d2); //메서드 호출, 호출한 곳으로 돌아와서
+		System.out.println("After change(d)"); // 7. println 메서드 In 8. 콘솔창 출력시 out
+		System.out.println("main() : x = " + d2.x); // 9. println 메서드 In 10. 콘솔창 출력시 out
+	} //main 메서드 종료
 	
-	static void change(int x) { //5. change 메서드 실행
-		x = 1000; // 지역변수 x변수에 1000대입
-		System.out.println("change() : x = " + x); //6. println 메서드 실행 In, 7. 콘솔 출력시 out
-	} //메서드 종료, 지역변수 ㅃㅇ
+	static void change(Data2 d2) { //4. change 메서드 실행 In
+		d2.x = 1000; // 참조변수 x에 1000값 대입
+		System.out.println("change() : " + d2.x); //5. println 메서드 In 6. 콘솔창 출력시 out
+	} //메서드 종료, 참조변수 x값은 변경되어 있다.
 }
