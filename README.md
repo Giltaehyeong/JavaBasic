@@ -1,2 +1,2 @@
 # JavaBasic
-Java의 정석 실습 repositories
+Java의 정석 3판 OOP Slisp
