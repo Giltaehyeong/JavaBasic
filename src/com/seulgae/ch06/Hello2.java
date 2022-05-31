@@ -5,6 +5,7 @@ class hello2{}
 class Hello3 {
 	public static void main(String[] args) { // 소스파일명과 클래스 이름이 다를 경우 컴파일러가 알아서 아무거나 실행시킴.
 		System.out.println("hello");
+		System.out.println("실습 타이틀 변경하기");
 	}
 }
 /*
