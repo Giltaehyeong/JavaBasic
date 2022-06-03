@@ -12,9 +12,9 @@ public class ReferenceReturnEx {
 	}
 	
 	static Data copy(Data d) {
-		Data tmp = new Data();
-		tmp.x = d.x;
+		Data tmp = new Data(); // 새로운 객체 tmp를 생성한다.
+		tmp.x = d.x; // d.x의 값을 tmp.x에 복사한다.
 		
-		return tmp;
+		return tmp; // 복사한 객체의 주소를 반환한다.
 	}
 }

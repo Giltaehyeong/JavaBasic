@@ -3,8 +3,13 @@ package com.seulgae.ch06;
 class OverloadingTest {
 	public static void main(String args[]) {
 		MyMath3 mm = new MyMath3();
-		System.out.println("mm.add(3, 3) 결과:" + mm.add(3, 3));
-		System.out.println("mm.add(3L, 3) 결과: " + mm.add(3L, 3));
+		// The method add(int, long) is ambiguous for the type MyMath3
+		//                                     모호하다, 확실하지 않다.
+		
+//		int result = mm.add(3, 3);
+//		System.out.println("mm.add(3, 3) 결과:" + result);
+		System.out.println("mm.add(3, 3) 결과:" + mm.add(3, 3)); // int, int 
+		System.out.println("mm.add(3L, 3) 결과: " + mm.add(3L, 3)); // long, int
 		System.out.println("mm.add(3, 3L) 결과: " + mm.add(3, 3L));
 		System.out.println("mm.add(3L, 3L) 결과: " + mm.add(3L, 3L));
 

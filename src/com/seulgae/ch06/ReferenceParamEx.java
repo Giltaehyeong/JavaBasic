@@ -14,7 +14,7 @@ public class ReferenceParamEx {
 		System.out.println("main() : x = " + d.x);
 	}
 	
-	static void change(Data2 d) { // 기본형 매개변수
+	static void change(Data2 d) { // 참조형 매개변수
 		d.x = 1000;
 		System.out.println("change() : x = " + d.x);
 	}
