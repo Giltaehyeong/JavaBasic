@@ -1,4 +1,5 @@
 package com.seulgae.ch07;
+
 class DefaultMethodTest {
 	public static void main(String[] args) {
 		Child c = new Child();

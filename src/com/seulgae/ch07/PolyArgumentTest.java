@@ -34,7 +34,7 @@ class Buyer {			// 고객, 물건을 사는 사람
 	int money = 1000;	// 소유금액
 	int bonusPoint = 0;	// 보너스 점수
 
-	void buy(Product p) {
+	void buy(Product p) { // 조상타입 매개변수
 		if(money < p.price) {
 			System.out.println("잔액이 부족하여 물건을 살 수 없습니다.");
 			return;
@@ -60,3 +60,4 @@ class PolyArgumentTest {
 		System.out.println("현재 보너스점수는 " + b.bonusPoint + "점입니다.");
 	}
 }
+
