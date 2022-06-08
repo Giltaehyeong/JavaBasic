@@ -1,9 +1,9 @@
 package com.seulgae.ch07;
 class Outer {
-	class InstanceInner {
+	class InstanceInner { // 인스턴스 멤버
 		int iv=100;
 	}
-	static class StaticInner {
+	static class StaticInner {// static 내부클래스, 객체 생성 x
 		int iv=200;
 		static int cv=300;
 	}
@@ -17,15 +17,15 @@ class Outer {
 
 class InnerEx4 {
 	public static void main(String[] args) {
-		// �ν��Ͻ�Ŭ������ �ν��Ͻ��� �����Ϸ���
-		// �ܺ� Ŭ������ �ν��Ͻ��� ���� �����ؾ� �Ѵ�.
-		Outer oc = new Outer();
-		Outer.InstanceInner ii = oc.new InstanceInner();
+		// 인스턴스클래스의 인스턴스를 생성하려면
+		// 외부 클래스의 인스턴스를 먼저 생성해야 한다.
+		Outer oc = new Outer(); // 외부 클래스의 인스턴스를 먼저 생성해야 인스턴스 클래스의
+		Outer.InstanceInner ii = oc.new InstanceInner(); // 인스턴스를 생성 가능
 
 		System.out.println("ii.iv : "+ ii.iv);
 		System.out.println("Outer.StaticInner.cv : " + Outer.StaticInner.cv);
 
-	     // ����ƽ ���� Ŭ������ �ν��Ͻ��� �ܺ� Ŭ������ ���� �������� �ʾƵ� �ȴ�.
+	     // 스태틱 내부 클래스의 인스턴스는 외부 클래스를 먼저 생성하지 않아도 된다.
 		Outer.StaticInner si = new Outer.StaticInner();
 		System.out.println("si.iv : "+ si.iv);
 	}

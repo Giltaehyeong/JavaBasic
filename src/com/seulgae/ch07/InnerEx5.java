@@ -11,8 +11,8 @@ class Outer2 {
 			System.out.println("       this.value :" + this.value);
 			System.out.println("Outer2.this.value :" + Outer2.this.value);
 		}
-	} // InnerŬ������ ��
-} // OuterŬ������ ��
+	} // Inner클래스의 끝
+} // Outer2 클래스의 끝
 
 class InnerEx5 {
 	public static void main(String args[]) {
@@ -20,4 +20,4 @@ class InnerEx5 {
 		Outer2.Inner inner = outer.new Inner();
 		inner.method1();
 	}
-} // InnerEx5 ��
+}
