@@ -9,7 +9,7 @@ class  InnerEx8 {
 				public void actionPerformed(ActionEvent e) {
 					System.out.println("ActionEvent occurred!!!");
 				}
-			} // �͸� Ŭ������ ��
+			} // 익명 클래스의 끝
 		);
-	} // main�޼����� ��
-} // InnerEx8Ŭ������ ��
+	} // main의 끝
+} // InnerEx8의 끝
